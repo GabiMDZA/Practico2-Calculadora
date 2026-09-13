@@ -1,8 +1,10 @@
+// Seleccionamos los elementos HTML que utiliza la calculadora.
 const num1 = document.getElementById("num1");
 const num2 = document.getElementById("num2");
 const resultado = document.getElementById("resultado");
 
 function suma() {
+    // Verificamos que los dos campos tengan datos antes de calcular.
     if (num1.value === "" || num2.value === "") {
         resultado.textContent = "Ingrese los números";
     } else {
@@ -11,6 +13,7 @@ function suma() {
 }
 
 function resta() {
+    // Verificamos que los dos campos tengan datos antes de calcular.
     if (num1.value === "" || num2.value === "") {
         resultado.textContent = "Ingrese los números";
     } else {
@@ -19,6 +22,7 @@ function resta() {
 }
 
 function multiplicacion() {
+    // Verificamos que los dos campos tengan datos antes de calcular.
     if (num1.value === "" || num2.value === "") {
         resultado.textContent = "Ingrese los números";
     } else {
@@ -27,6 +31,7 @@ function multiplicacion() {
 }
 
 function division() {
+    // Verificamos los campos y evitamos dividir entre cero.
     if (num1.value === "" || num2.value === "") {
         resultado.textContent = "Ingrese los números";
     } else if (Number(num2.value) === 0) {
@@ -37,6 +42,7 @@ function division() {
 }
 
 function potencia() {
+    // La potencia utiliza el primer número como base y el segundo como exponente.
     if (num1.value === "" || num2.value === "") {
         resultado.textContent = "Ingrese los números";
     } else {
@@ -45,6 +51,7 @@ function potencia() {
 }
 
 function raiz() {
+    // Calculamos la raíz usando los valores introducidos en los campos.
     if (num1.value === "") {
         resultado.textContent = "Ingrese un número";
     } else {
@@ -52,6 +59,7 @@ function raiz() {
     }
 }
 
+// Escuchamos el clic de cada botón y ejecutamos su función correspondiente.
 document.getElementById("sumar").addEventListener("click", suma);
 document.getElementById("restar").addEventListener("click", resta);
 document.getElementById("multiplicar").addEventListener("click", multiplicacion);

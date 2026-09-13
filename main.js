@@ -4,7 +4,7 @@ const resultado = document.getElementById("resultado");
 
 function suma() {
     if (num1.value === "" || num2.value === "") {
-        resultado.textContent = "Ingrese dos números";
+        resultado.textContent = "Ingrese los números";
     } else {
         resultado.textContent = Number(num1.value) + Number(num2.value);
     }
@@ -12,7 +12,7 @@ function suma() {
 
 function resta() {
     if (num1.value === "" || num2.value === "") {
-        resultado.textContent = "Ingrese dos números";
+        resultado.textContent = "Ingrese los números";
     } else {
         resultado.textContent = Number(num1.value) - Number(num2.value);
     }
@@ -20,7 +20,7 @@ function resta() {
 
 function multiplicacion() {
     if (num1.value === "" || num2.value === "") {
-        resultado.textContent = "Ingrese dos números";
+        resultado.textContent = "Ingrese los números";
     } else {
         resultado.textContent = Number(num1.value) * Number(num2.value);
     }
@@ -28,7 +28,7 @@ function multiplicacion() {
 
 function division() {
     if (num1.value === "" || num2.value === "") {
-        resultado.textContent = "Ingrese dos números";
+        resultado.textContent = "Ingrese los números";
     } else if (Number(num2.value) === 0) {
         resultado.textContent = "No se puede dividir por cero";
     } else {
@@ -38,7 +38,7 @@ function division() {
 
 function potencia() {
     if (num1.value === "" || num2.value === "") {
-        resultado.textContent = "Ingrese dos números";
+        resultado.textContent = "Ingrese los números";
     } else {
         resultado.textContent = Number(num1.value) ** Number(num2.value);
     }
@@ -47,10 +47,8 @@ function potencia() {
 function raiz() {
     if (num1.value === "") {
         resultado.textContent = "Ingrese un número";
-    } else if (Number(num1.value) < 0) {
-        resultado.textContent = "No existe raíz real de un número negativo";
     } else {
-        resultado.textContent = Math.sqrt(Number(num1.value));
+        resultado.textContent = Number(num2.value) ** (1 / Number(num1.value));
     }
 }
 
